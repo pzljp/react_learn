@@ -10,7 +10,9 @@ import Body from './components/body';
 import ReactMixin from 'react-mixin';
 import MixinLog from  './components/mixins';
 
-class Index extends Component {
+import 'antd/dist/antd.css';
+
+export default class Index extends Component {
 
     constructor() {
         super(); //调用基本的所有的初始化方法
@@ -45,6 +47,9 @@ class Index extends Component {
             <div>
                 <Header />
                 <Body age={11} userName={'121212wewe'}/>
+                <div>
+                    {this.props.children}
+                </div>
                 <Footer />
 
                 <p>{this.state.age}</p>
@@ -57,4 +62,4 @@ class Index extends Component {
 
 ReactMixin(Index.prototype, MixinLog);
 
-ReactDOM.render(<Index />, document.getElementById('example'));
+//ReactDOM.render(<Index />, document.getElementById('example'));

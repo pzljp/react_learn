@@ -4,6 +4,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Child from './child';
+import {Input} from 'antd';
 
 
 class Body extends Component {
@@ -25,9 +26,8 @@ class Body extends Component {
         return (
             <div>
                 <h2>页面主体部分</h2>
-                <p>
-                    <input type="button" value="提交"/>
-                </p>
+                <Input type="button" value="提交"/>
+                <Input placeholder="Basic usage" />
                 <h1>
                     {this.props.age} {this.props.userName}
                 </h1>
