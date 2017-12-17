@@ -4,11 +4,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-import Header from './components/header';
-import Footer from './components/footer';
-import Body from './components/body';
-import ReactMixin from 'react-mixin';
-import MixinLog from  './components/mixins';
+
 
 import 'antd/dist/antd.css';
 
@@ -29,7 +25,6 @@ export default class Index extends Component {
         });
 
         this.refs.submitButton.style.color = 'red';
-        MixinLog.log2();
     }
 
     handle(event, param) {
